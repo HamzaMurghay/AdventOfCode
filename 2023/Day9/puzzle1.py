@@ -204,7 +204,7 @@ total_sum_of_extrapolated_values = 0
 for line in sstring.splitlines():
     numbers = [int(num) for num in line.split()]
     while any(num for num in numbers):
-        total_sum_of_extrapolated_values += int(numbers[len(numbers)-1])
+        total_sum_of_extrapolated_values += numbers[len(numbers)-1]
         numbers = [numbers[current_number_index+1] - numbers[current_number_index] for current_number_index in range(len(numbers)-1)]
 
 print(total_sum_of_extrapolated_values)
